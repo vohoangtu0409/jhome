@@ -10,4 +10,8 @@ public class DashboardController extends Controller {
         super(request, response);
     }
 
+    public void index(){
+        System.out.println("dasboard index");
+    }
+
 }

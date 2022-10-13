@@ -8,4 +8,12 @@ public class Action {
         this.controller = controller;
         this.handler = handler;
     }
+
+    public Object getController() {
+        return controller;
+    }
+
+    public String getHandler() {
+        return handler;
+    }
 }

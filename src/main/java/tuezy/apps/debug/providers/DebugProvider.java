@@ -1,12 +1,13 @@
-package tuezy.apps.dashboard.providers;
+package tuezy.apps.debug.providers;
 
 import dev.tuezy.routing.Action;
 import tuezy.Application;
 import tuezy.apps.dashboard.controllers.DashboardController;
+import tuezy.apps.debug.providers.controllers.DebugController;
 import tuezy.cores.AppProvider;
 import tuezy.cores.Core;
 
-public class DashboardProvider implements AppProvider {
+public class DebugProvider implements AppProvider {
 
     @Override
     public void register() {
@@ -14,6 +15,6 @@ public class DashboardProvider implements AppProvider {
     }
 
     private void routes(){
-        Core.router().get("/dashboard", new Action(DashboardController.class, "index"));
+        Core.router().get("/debug", new Action(DebugController.class, "index"));
     }
 }

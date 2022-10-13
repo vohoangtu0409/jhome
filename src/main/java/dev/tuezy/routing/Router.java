@@ -37,10 +37,8 @@ public class Router {
         return this;
     }
 
-    public Object resolve(HttpServletRequest request){
-        Route route = (Route) this.routes.get(this.generateRequestKey(request));
-        System.out.println(route);
-        return null;
+    public Route resolve(HttpServletRequest request){
+        return (Route) this.routes.get(this.generateRequestKey(request));
     }
 
     private String generateRequestKey(HttpServletRequest request){
